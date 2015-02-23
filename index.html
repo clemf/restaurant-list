@@ -33,7 +33,9 @@
                 <input type="text" class="form-control input-sm" ng-model="item.name" placeholder="Name" required/>
                 <input type="text" class="form-control input-sm" ng-model="item.foodType" placeholder="Food Type" required/>
                 <input type="text" class="form-control input-sm" ng-model="item.location" placeholder="Location" required/>
-                <input type="text" class="form-control input-sm" ng-model="item.priceRange" placeholder="Price Range" required/>
+                <input type="radio" ng-model="item.priceRange" class="form-control input-sm" value="$">$
+                <input type="radio" ng-model="item.priceRange" class="form-control input-sm" value="$$">$$
+                <input type="radio" ng-model="item.priceRange" class="form-control input-sm" value="$$$">$$$
                 <button class="btn btn-default btn-sm" type="submit">Save</button>
               </form>
             </span>
@@ -47,7 +49,9 @@
               <input type="text" ng-model="restaurantName" class="form-control" placeholder="Enter name">
               <input type="text" ng-model="restaurantFoodType" class="form-control" placeholder="Enter food type">
               <input type="text" ng-model="restaurantLocation" class="form-control" placeholder="Enter location">
-              <input type="text" ng-model="restaurantPriceRange" class="form-control" placeholder="Enter price range">
+              <input type="radio" ng-model="restaurantPriceRange" class="form-control" value="$">$
+              <input type="radio" ng-model="restaurantPriceRange" class="form-control" value="$$">$$
+              <input type="radio" ng-model="restaurantPriceRange" class="form-control" value="$$$">$$$
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
