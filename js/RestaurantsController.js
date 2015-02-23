@@ -1,15 +1,11 @@
 restaurantList.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
   $scope.restaurants = [];
+  $scope.addRestaurant = function() {
+    $scope.restaurants.push({name: $scope.restaurantName});
+    $scope.restaurantName = null;
+  };
+  $scope.deleteRestaurant = function(restaurant) {
+    var index = $scope.restaurants.indexOf(restaurant);
+    $scope.restaurants.splice(index, 1);
+  };
 });
-
-// studentRoster.controller('StudentsCtrl', function StudentsCtrl($scope) {
-//   $scope.students = [];
-//   $scope.addStudent = function() {
-//     $scope.students.push({ name: $scope.studentName });
-//     $scope.studentName = null;
-//   };
-//   $scope.deleteStudent = function(student) {
-//     var index = $scope.students.indexOf(student);
-//     $scope.students.splice(index, 1);
-//   };
-// });
