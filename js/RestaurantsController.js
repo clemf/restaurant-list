@@ -1,4 +1,4 @@
-restaurants.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
+restaurantList.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
   $scope.restaurants = [];
 });
 

@@ -2,26 +2,16 @@
 <html>
   <head>
     <title>Restaurants</title>
-  </head>
-  <body>
-
-  </body>
-</html>
-
-<!-- <!DOCTYPE html>
-<html ng-app="studentRoster">
-  <head>
-    <title>Student App</title>
     <script src="lib/angular.js"></script>
     <script src="app.js"></script>
-    <script src="js/StudentsController.js"></script>
+    <script src="js/RestaurantsController.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <body>
-    <div class="container" ng-controller="StudentsCtrl">
+    <div class="container" ng-controller="RestaurantsCtrl">
       <div class="row">
         <div class="col-md-12">
-          <h4>Search Students</h4>
+          <h4>Search Restaurants</h4>
           <form class="form-inline" role="form">
             <div class="form-group">
               <input type="text" ng-model="query" class="form-control" placeholder="Search">
@@ -31,27 +21,27 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h2 ng-show="students.length && filtered.length">Student List</h2>
-          <h2 ng-show="students.length && !filtered.length">No Matches</h2>
+          <h2 ng-show="restaurants.length && filtered.length">Restaurant List</h2>
+          <h2 ng-show="restaurants.length && !filtered.length">No Matches</h2>
           <ul>
-            <li ng-repeat="item in filtered = (students | filter:query)">
-              <span ng-click="editing = true" ng-hide="editing">
-                {{item.name}} <a ng-click="deleteStudent(item)">Delete</a>
-              </span>
-              <span class="form-group" ng-show="editing" ng-submit="editing = false">
-                <form class="form-inline" role="form">
-                  <input type="text" class="form-control input-sm" ng-model="item.name" placeholer="Name" required/>
-                  <button class="btn btn-default btn-sm" type="submit">Save</button>
-                </form>
-              </span>
+            <li ng-repeat="item in filtered = (restaurants | filter:query)">
+            <span ng-click="editing = true" ng-hide="editing">
+              {{item.name}} <a ng-click="deleteRestaurant(item)">Delete</a>
+            </span>
+            <span class="form-group" ng-show="editing" ng-submit="editing = false">
+              <form class="form-inline" role="form">
+                <input type="text" class="form-control input-sm" ng-model="item.name" placeholder="Name" required/>
+                <button class="btn btn-default btn-sm" type="submit">Save</button>
+              </form>
+            </span>
             </li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h2>New Student</h2>
-          <form class="form-inline" ng-submit="addStudent()" role="form">
+          <h2>New Restaurant</h2>
+          <form class="form-inline" ng-submit="addRestaurant()" role="form">
             <div class="form-group">
-              <input type="text" ng-model="studentName" class="form-control" placeholder="Enter name">
+              <input type="text" ng-model="restaurantName" class="form-control" placeholder="Enter name">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
@@ -59,4 +49,4 @@
       </div>
     </div>
   </body>
-</html> -->
+</html>
